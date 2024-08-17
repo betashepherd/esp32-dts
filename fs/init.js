@@ -39,7 +39,7 @@ UART.setDispatcher(uartNo, function(uartNo) {
 UART.setRxEnabled(uartNo, true);
 let led = Cfg.get('board.led1.pin');              // Built-in LED GPIO number
 let device_id = Cfg.get('device.id');
-let topic = device_id + '/messages';
+let topic = '/' + device_id + '/messages';
 
 let pubData = function() {
   return JSON.stringify({
@@ -56,8 +56,9 @@ let pubData = function() {
 // Blink built-in LED every second
 GPIO.set_mode(led, GPIO.MODE_OUTPUT);
 Timer.set(1000 /* 1 sec */, Timer.REPEAT, function() {
-  let value = GPIO.toggle(led);
-  print(value ? 'Tick' : 'Tock');
+  // let value = GPIO.toggle(led);
+  // print(value ? 'Tick' : 'Tock');
+  GPIO.toggle(led);
   print(pubData());
 }, null);
 
