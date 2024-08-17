@@ -1,0 +1,35 @@
+{
+  "board": {
+    "led1": {
+      "active_high": true,
+      "pin": 2
+    }
+  },
+  "mqtt": {
+    "enable": true,
+    "server": "broker.emqx.io:1883",
+    "user": "",
+    "pass": "",
+    "reconnect_timeout_min": 3,
+    "reconnect_timeout_max": 5,
+    "keep_alive": 15
+  },
+  "provision": {
+    "btn": {
+      "hold_ms": 10000,
+      "inhibit_after_s": 0,
+      "pin": 0,
+      "pull_up": true
+    },
+    "led": {
+      "active_high": true,
+      "pin": 2
+    },
+    "max_state": 3
+  },
+  "sntp": {
+    "server": "cn.pool.ntp.org",
+    "retry_max": 3,
+    "update_interval": 300
+  }
+}
