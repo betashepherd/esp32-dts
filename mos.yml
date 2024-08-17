@@ -11,7 +11,7 @@ config_schema:
   - ["app", "o", {title: "dts_??????"}]
   - ["device.id", "dts_??????"]
   - ["bt.enable", "b", false, {title: "Enable BT"}]
-  - ["mqtt.server", "mqtt.eclipseprojects.io:1883"]
+  - ["mqtt.server", "broker.emqx.io:1883"]
   - ["wifi.ap.ssid", "dts_??????"]
   - ["wifi.ap.pass", "dts@1234"]
 
